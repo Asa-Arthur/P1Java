@@ -35,6 +35,8 @@ public class AplicacaoProva extends JApplet {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             
+            
+            
             @Override
             public void run() {
                 try {
@@ -55,6 +57,9 @@ public class AplicacaoProva extends JApplet {
                 frame.setVisible(true);
                 
                 applet.start();
+                
+                Conexao c = new Conexao();
+                c.getConexao();
             }
         });
     }
