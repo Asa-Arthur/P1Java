@@ -57,9 +57,6 @@ public class AplicacaoProva extends JApplet {
                 frame.setVisible(true);
                 
                 applet.start();
-                
-                Conexao c = new Conexao();
-                c.getConexao();
             }
         });
     }

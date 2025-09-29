@@ -121,20 +121,16 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
 
     private void btnCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarProdutoActionPerformed
         // TODO add your handling code here:
-        Conexao c = new Conexao();
-        c.getConexao();
+       // Conexao c = new Conexao();
+        //c.getConexao();
         
         Produto p = new Produto();
         p.setNome(txtProdutoNome.getText());
-        if(txaProdutoDesc.getText().equals(""))
-            p.setDesc(null);
-        else
-            p.setDesc(txaProdutoDesc.getText());
+        p.setDesc(txaProdutoDesc.getText());
         p.setPreco(Float.parseFloat(txtValor.getText()));
         p.setQtdEstoque(Integer.parseInt(txtQtdEstoque.getText()));
         
         ProdutoDAO pDAO = new ProdutoDAO();
-        
         pDAO.insertProduto(p);
     }//GEN-LAST:event_btnCadastrarProdutoActionPerformed
 

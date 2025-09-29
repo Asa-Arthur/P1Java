@@ -25,7 +25,7 @@ public class ProdutoDAO {
     }
     
     public void insertProduto(Produto produto){
-        String sql = "INSERT INTO produto (pro_nome, pro_desc, pro_precoVenda, pro_qtdEstoque) values (?,?,?,?)";
+        String sql = "INSERT into produto(pro_nome, pro_desc, pro_precoVenda, pro_qtdEstoque) values (?,?,?,?)";
         try {
             PreparedStatement stmt = this.con.prepareStatement(sql);
             stmt.setString(1, produto.getNome());
@@ -36,6 +36,7 @@ public class ProdutoDAO {
             stmt.execute();
             System.out.println("Produto inserido com sucesso");
         } catch (Exception e) {
+            System.out.println("Falha ao cadastrar produto: "+e.getMessage());
         }
     }
     
